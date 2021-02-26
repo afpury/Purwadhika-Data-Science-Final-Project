@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Loanday Template">
+    <meta name="keywords" content="Loanday, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Term Deposit Subscription Prediction</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="static/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="static/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="static/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="static/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="static/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="static/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="static/css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="{{ url_for('index') }}"><img src="static/img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="header__nav">
+                        <nav class="header__menu">
+                            <ul>
+                                <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
+                                <li><a href="{{ url_for('businessinsight') }}">Business Insight</a></li>
+				</ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero set-bg" data-setbg="static/img/hero-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="hero__text">
+                        <h2>Predict Your Bank Client Term Deposit Subscription</h2>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-2">
+                    <div class="hero__form">
+                        <h3>Input Values</h3>
+                        <form method="POST" action = "http://127.0.0.1:5000/result">
+                            <br> Age : <input type="number" step='1' min='18' max='95' name="age"/><br>
+                            <br>Average Yearly Balance : <input type="number" step='1' min='-8019' max='102127' name="balance"/><br>
+                            <br>Last Contacted (Day) : <input type="number" step='1' min='1' max='31' name="day"/><br>
+                            <br>Times of Contact During This Campain : <input type="number" step='1' min='1' max='63' name="campaign"/><br>
+                            <br>Last Contact After Last Campaign (Day): <input type="number" step='1' min='-1' max='871' name="pdays"/><br>
+                            <br>Times of Contact Before This Campaign : <input type="number" step='1' min='0' max='275' name="previous"/><br><br>
+                            <div class="input-group mb-3" style="width: 400px">
+                                <span class="input-group-text" style="width: 125px">Job</span>
+                                <select name="job" style="width: 250px" class="form-control" required="required">
+                                <option value="unemployed">Unemployed</option>
+                                <option value="services">Services</option>
+                                <option value="management">Management</option>
+                                <option value="blue-collar">Blue-collar</option>
+                                <option value="self-employed">Self-employed</option>
+                                <option value="technician">Technician</option>
+                                <option value="entrepreneur">Entrepreneur</option>
+                                <option value="admin.">Admin.</option>
+                                <option value="student">Student</option>
+                                <option value="housemaid">Housemaid</option>
+                                <option value="retired">Retired</option>
+                                <option value="unknown">Unknown</option>
+                                <option disabled selected hidden>The job?</option>
+                            </select>
+                            </div>                  
+                            <div class="input-group mb-3" style="width: 400px">
+                                <span class="input-group-text" style="width: 125px">Marital</span>
+                                <select name="marital" style="width: 250px" class="form-control" required="required">
+                                <option value="married">Married</option>
+                                <option value="single">Single</option>
+                                <option value="divorced">Divorced</option>
+                                <option disabled selected hidden>Married?</option>
+                            </select>
+                            </div>
+                            <div class="input-group mb-3" style="width: 400px">
+                                <span class="input-group-text" style="width: 125px">Education</span>
+                                <select name="education" style="width: 250px" class="form-control" required="required">
+                                <option value="primary">Primary</option>
+                                <option value="secondary">Secondary</option>
+                                <option value="tertiary">Tertiary</option>
+                                <option value="unknown">Unknown</option>
+                                <option disabled selected hidden>Last education?</option>
+                            </select>
+                            </div>
+                            <div class="input-group mb-3" style="width: 400px">
+                                <span class="input-group-text" style="width: 125px">Default</span>
+                                <select name="default" style="width: 250px" class="form-control" required="required">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                                <option disabled selected hidden>Has credit in default?</option>
+                            </select>
+                            </div>
+                            <div class="input-group mb-3" style="width: 400px">
+                                <span class="input-group-text" style="width: 125px">Housing</span>
+                                <select name="housing" style="width: 250px" class="form-control" required="required">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                                <option disabled selected hidden>Has housing loan?</option>
+                            </select>
+                            </div>
+                            <div class="input-group mb-3" style="width: 400px">
+                                <span class="input-group-text" style="width: 125px">Loan</span>
+                                <select name="loan" style="width: 250px" class="form-control" required="required">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                                <option disabled selected hidden>Has personal loan?</option>
+                            </select>
+                            </div>
+                            <div class="input-group mb-3" style="width: 400px">
+                                <span class="input-group-text" style="width: 125px">Contact</span>
+                                <select name="contact" style="width: 250px" class="form-control" required="required">
+                                <option value="cellular">Cellular</option>
+                                <option value="telephone">Telephone</option>
+                                <option disabled selected hidden>Contacted by?</option>
+                            </select>
+                            </div>
+                            <div class="input-group mb-3" style="width: 400px">
+                                <span class="input-group-text" style="width: 125px">Month</span>
+                                <select name="month" style="width: 250px" class="form-control" required="required">
+                                <option value="oct">Oct</option>
+                                <option value="may">May</option>
+                                <option value="apr">Apr</option>
+                                <option value="jun">Jun</option>
+                                <option value="feb">Feb</option>
+                                <option value="aug">Aug</option>
+                                <option value="jan">Jan</option>
+                                <option value="jul">Jul</option>
+                                <option value="nov">Nov</option>
+                                <option value="sep">Sep</option>
+                                <option value="mar">Mar</option>
+                                <option value="dec">Dec</option>
+                                <option disabled selected hidden>Last contacted month?</option>
+                            </select>
+                            </div>
+        <br><br>
+        <center><button type="submit" class="site-btn">Get Your Prediction Results!</button></center>
+        </form><br>
+
+    </div>
+    <br>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Hero Section End -->
+
+    <!-- Js Plugins -->
+    <script src="static/js/jquery-3.3.1.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/jquery.nice-select.min.js"></script>
+    <script src="static/js/jquery-ui.min.js"></script>
+    <script src="static/js/jquery.nicescroll.min.js"></script>
+    <script src="static/js/jquery.magnific-popup.min.js"></script>
+    <script src="static/js/jquery.slicknav.js"></script>
+    <script src="static/js/owl.carousel.min.js"></script>
+    <script src="static/js/main.js"></script>
+
+</body>
+</html>
