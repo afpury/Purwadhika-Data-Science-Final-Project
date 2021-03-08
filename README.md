@@ -73,11 +73,11 @@ Encoding
 
 Model Building
 
-Train Test Split
-Using pipeline for model building
-Creating base model (DTC, Log Reg, RFC)
-Hyperparameter tuning on all algorithm
-checking evaluation matrix on the tuned model
-Export the model with the best accuracy score
+Train Test Split<br>
+Using pipeline for model building<br>
+Creating base model (DTC, Log Reg, RFC)<br>
+Hyperparameter tuning on all algorithm<br>
+checking evaluation matrix on the tuned model<br>
+Export the model with the best score<br>
 Dashboard Building Using Flask
 
