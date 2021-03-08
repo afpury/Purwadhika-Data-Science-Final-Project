@@ -46,32 +46,28 @@ The data is related to the direct marketing campaigns of a Portuguese banking in
 Citation
 This dataset is publicly available for research. It has been picked up from the UCI Machine Learning with random sampling and a few additional columns.
 
-Past Usage
-The full dataset was described and analyzed in:
-
-S. Moro, R. Laureano and P. Cortez. Using Data Mining for Bank Direct Marketing: An Application of the CRISP-DM Methodology.
-In P. Novais et al. (Eds.), Proceedings of the European Simulation and Modelling Conference - ESM'2011, pp. 117-121, Guimarães, Portugal, October, 2011. EUROSIS.
-Acknowledgement
-Created by: Paulo Cortez (Univ. Minho) and Sérgio Moro (ISCTE-IUL) @ 2012. Thanks to Berkin Kaplanoğlu for helping with the proper column descriptions.
-
 
 Workflow:
 
-Data Analysis
-Visualization
+Data Analysis<br>
+Visualization<br>
 Insight & Conclusion
+
 
 Data Cleaning :
 
-Dropping unnecessary and unknown columns
-Dropping rows with insignificant values
+Dropping unnecessary and unknown columns<br>
+Dropping rows with insignificant values<br>
 Imputing missing value with mode (based on the context)
 
-Feature Engineering
-Binning
-Encoding
 
-Model Building
+Feature Engineering:
+
+Binning<br>
+Encoding<br>
+
+
+Model Building:
 
 Train Test Split<br>
 Using pipeline for model building<br>
