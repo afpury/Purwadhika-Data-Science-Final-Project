@@ -1,4 +1,4 @@
-## Final Project Job Connector Data Science
+## <center> Final Project Job Connector Data Science </center>
 ## Purwadhika Startup and Coding School 2020
 # Telemarketing Term Deposit Prediction
 
